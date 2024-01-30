@@ -136,6 +136,7 @@ require('lazy').setup({
       { "<leader>3",  function() require("harpoon"):list():select(3) end, desc = "harpoon to file 3", },
       { "<leader>4",  function() require("harpoon"):list():select(4) end, desc = "harpoon to file 4", },
       { "<leader>5",  function() require("harpoon"):list():select(5) end, desc = "harpoon to file 5", },
+      { "<leader>RM", function() require("harpoon"):list():remove() end,  desc = "delete a file", },
     },
   },
 
@@ -469,7 +470,7 @@ vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = 
 vim.defer_fn(function()
   require('nvim-treesitter.configs').setup {
     -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = { 'c', 'css', 'html', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'astro' },
+    ensure_installed = { 'c', 'css', 'html', 'cpp', 'go', 'lua', 'svelte', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'astro' },
 
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
     auto_install = false,
