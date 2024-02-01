@@ -45,6 +45,9 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.wo.relativenumber = true
 
+vim.opt["tabstop"] = 4
+vim.opt["shiftwidth"] = 4
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
