@@ -280,6 +280,7 @@ require('lazy').setup({
   --     vim.cmd.colorscheme 'tokyonight'
   --   end,
   -- },
+
   {
     'rose-pine/neovim',
     name = 'rose-pine',
@@ -294,6 +295,19 @@ require('lazy').setup({
     end,
   },
 
+  -- {
+  --   "catppuccin/nvim",
+  --   name = "catppuccin",
+  --   priority = 1000,
+  --   config = function()
+  --     require('catppuccin').setup({
+  --       flavour = "mocha",
+  --       transparent_background = true,
+  --     })
+  --     vim.cmd.colorscheme "catppuccin"
+  --   end,
+  -- },
+
   {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
@@ -301,8 +315,8 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        transparent = true,
-        theme = 'rose-pine',
+        theme = "Rose-Pine",
+        transparency = true,
         component_separators = '|',
         section_separators = '',
       },
