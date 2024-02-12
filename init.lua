@@ -267,7 +267,7 @@ require('lazy').setup({
     },
   },
 
-
+  -- themes
   -- {
   --   -- Theme inspired by Atom
   --   'folke/tokyonight.nvim',
@@ -281,32 +281,33 @@ require('lazy').setup({
   --   end,
   -- },
 
-  {
-    'rose-pine/neovim',
-    name = 'rose-pine',
-    config = function()
-      require('rose-pine').setup({
-        dark_variant = "main",
-        styles = {
-          transparency = true,
-        }
-      })
-      vim.cmd.colorscheme 'rose-pine'
-    end,
-  },
-
   -- {
-  --   "catppuccin/nvim",
-  --   name = "catppuccin",
-  --   priority = 1000,
+  --   'rose-pine/neovim',
+  --   name = 'rose-pine',
   --   config = function()
-  --     require('catppuccin').setup({
-  --       flavour = "mocha",
-  --       transparent_background = true,
+  --     require('rose-pine').setup({
+  --       dark_variant = "main",
+  --       styles = {
+  --         transparency = true,
+  --       }
   --     })
-  --     vim.cmd.colorscheme "catppuccin"
+  --     vim.cmd.colorscheme 'rose-pine'
   --   end,
   -- },
+
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require('catppuccin').setup({
+        flavour = "mocha",
+        transparent_background = false,
+      })
+      vim.cmd.colorscheme "catppuccin"
+    end,
+  },
 
   {
     -- Set lualine as statusline
@@ -314,9 +315,9 @@ require('lazy').setup({
     -- See `:help lualine.txt`
     opts = {
       options = {
-        icons_enabled = false,
-        theme = "Rose-Pine",
-        transparency = true,
+        icons_enabled = true,
+        theme = 'catppuccin',
+        -- transparency = true,
         component_separators = '|',
         section_separators = '',
       },
