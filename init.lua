@@ -149,7 +149,7 @@ require('lazy').setup({
   },
 
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim',  opts = {} },
+  { 'folke/which-key.nvim', opts = {} },
 
   -- Twilight
   {
@@ -168,8 +168,17 @@ require('lazy').setup({
       -- your configuration comes here
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
+      window = {
+        options = {
+          relativenumber = false,
+          number = false,
+        },
+      },
     }
   },
+
+  -- Pencil
+  { "preservim/vim-pencil" },
 
   --DAP
   {
@@ -519,7 +528,7 @@ require('lazy').setup({
   },
 
   -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
+  { 'numToStr/Comment.nvim',  opts = {} },
 
   -- Fuzzy Finder (files, lsp, etc)
   {
