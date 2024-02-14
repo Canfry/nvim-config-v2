@@ -482,7 +482,7 @@ require('lazy').setup({
       require('rose-pine').setup({
         dark_variant = "main",
         styles = {
-          transparency = true,
+          transparency = false,
         }
       })
       vim.cmd.colorscheme 'rose-pine'
