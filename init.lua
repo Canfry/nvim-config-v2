@@ -879,6 +879,7 @@ local servers = {
   -- pyright = {},
   -- rust_analyzer = {},
   tsserver = {},
+  astro = { filetypes = { 'astro' } },
   html = { filetypes = { 'html', 'twig', 'hbs' } },
 
   lua_ls = {
