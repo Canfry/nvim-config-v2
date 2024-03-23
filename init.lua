@@ -880,6 +880,7 @@ local servers = {
   -- rust_analyzer = {},
   tsserver = {},
   astro = { filetypes = { 'astro' } },
+  tailwindcss = { filetypes = { 'html', 'css', 'scss', 'javascript', 'typescript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue', 'astro', 'htmldjango' } },
   html = { filetypes = { 'html', 'htmldjango', 'twig', 'hbs' } },
 
   lua_ls = {
