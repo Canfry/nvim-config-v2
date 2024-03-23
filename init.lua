@@ -880,7 +880,7 @@ local servers = {
   -- rust_analyzer = {},
   tsserver = {},
   astro = { filetypes = { 'astro' } },
-  html = { filetypes = { 'html', 'twig', 'hbs' } },
+  html = { filetypes = { 'html', 'htmldjango', 'twig', 'hbs' } },
 
   lua_ls = {
     Lua = {
