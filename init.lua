@@ -462,32 +462,32 @@ require('lazy').setup({
   },
 
   -- themes
-  -- {
-  --   -- Theme inspired by Atom
-  --   'folke/tokyonight.nvim',
-  --   priority = 1000,
-  --   config = function()
-  --     require('tokyonight').setup({
-  --       transparent = true,
-  --       style = 'night',
-  --     })
-  --     vim.cmd.colorscheme 'tokyonight'
-  --   end,
-  -- },
-
   {
-    'rose-pine/neovim',
-    name = 'rose-pine',
+    -- Theme inspired by Atom
+    'folke/tokyonight.nvim',
+    priority = 1000,
     config = function()
-      require('rose-pine').setup({
-        dark_variant = "main",
-        styles = {
-          transparency = false,
-        }
+      require('tokyonight').setup({
+        transparent = true,
+        style = 'night',
       })
-      vim.cmd.colorscheme 'rose-pine'
+      vim.cmd.colorscheme 'tokyonight'
     end,
   },
+
+  --{
+  --  'rose-pine/neovim',
+  --  name = 'rose-pine',
+  --  config = function()
+  --    require('rose-pine').setup({
+  --      dark_variant = "main",
+  --      styles = {
+  --        transparency = false,
+  --      }
+  --    })
+  --    vim.cmd.colorscheme 'rose-pine'
+  --  end,
+  -- },
 
   -- {
   --   "catppuccin/nvim",
@@ -510,7 +510,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = true,
-        theme = 'rose-pine',
+        theme = 'tokyonight',
         -- transparency = true,
         component_separators = '|',
         section_separators = '',
