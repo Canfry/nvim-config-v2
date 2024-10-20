@@ -253,6 +253,8 @@ require('lazy').setup({
       },
     },
 
+
+
     -- stylua: ignore
     keys = {
       { "<leader>dB", function() require("dap").set_breakpoint(vim.fn.input('Breakpoint condition: ')) end, desc = "Breakpoint Condition" },
@@ -286,6 +288,26 @@ require('lazy').setup({
         )
       end
     end,
+  },
+
+  -- Lazygit
+  {
+    "kdheepak/lazygit.nvim",
+    lazy = true,
+    cmd = {
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitConfigFile",
+      "LazyGitFilter",
+      "LazyGitCurrentFile",
+      "LazyGitFilterCurrentFile",
+    },
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-lua/popup.nvim",
+    },
+
+    vim.keymap.set('n', '<leader>lg', '<cmd>:LazyGit<cr>'),
   },
 
   -- ChatGPT
